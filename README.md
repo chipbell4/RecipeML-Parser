@@ -1,20 +1,24 @@
 PHP Library to parse Recipe Markup language (that I invented)
 
+```
 A Recipe looks like the following
-@Recipe Chocolate Cake
-@Ingredients Cake
-1/3 cup flour
-1/3 cup sugar
-1 lb butter (for richness)
-@EndIngredients
-
-Here are some steps to complete this action.
-Do a couple more things.
-Blah Blah Blah
-
-New Paragraph
+@Recipe Cake
 @Ingredients Icing
-1 container premade icing
+@I 1/2 cup sugar
+@I 1 cup milk
+@I 1/3 cup flour
 @EndIngredients
+Hello world here is an image:
+@Image /images/whatever.jpg Here is some alt text
+```
 
-Nuff said...
+This will render for the most part like the following:
+```html
+<h2 class="recipe-title">Cake</h2>
+<h3 class="ingredients-header">Icing</h3><ul class="ingredients-list">
+<li class="ingredient">&#xBD; cup sugar </li>
+<li class="ingredient">1 cup milk </li>
+<li class="ingredient">$#x2153; cup flour </li>
+</ul>
+Hello world here is an image:<img class='recipe-image' src='/images/whatever.jpg' alt='Here is some alt text'/>
+```

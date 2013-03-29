@@ -7,3 +7,7 @@
 
 Hello world here is an image:
 @Image /images/whatever.jpg Here is some alt text
+Blah Blah
+
+This should occur on a new line.
+However, this line is still in the same paragraph.

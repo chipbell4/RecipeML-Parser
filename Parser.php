@@ -44,7 +44,12 @@ class Parser
 				}
 			}
 			if(!$matched)
+			{
 				$markup .= $line;
+				if(strlen($line) < 1)
+					$markup .= "<br/>";
+				$markup .= "\n";
+			}
 		}
 		return $markup;
 	}
